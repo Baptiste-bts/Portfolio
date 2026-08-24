@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veille technologique — Baptiste Bousser</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">BAPTISTE&nbsp;BOUSSER<span class="dot">.</span><small>SISR</small></a>
+    <button class="navtoggle" aria-label="Ouvrir le menu">☰</button>
+    <nav class="mainnav">
+      <a href="index.html">ACCUEIL</a>
+      <a href="bts.html">LE BTS SIO</a>
+      <a href="cv.html">CV</a>
+      <a href="lettre.html">LETTRE</a>
+      <a href="activites.html">ACTIVITÉS</a>
+      <a href="veille.html">VEILLE</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom:50px;">
+    <div class="wrap">
+      <p class="eyebrow">VEILLE TECHNOLOGIQUE</p>
+      <h1>Sécurité des <em>infrastructures</em> &amp; des réseaux</h1>
+      <p class="lede">Dans le cadre de mon BTS SIO option SISR, je suis l'actualité de la cybersécurité et de l'administration systèmes/réseaux : vulnérabilités critiques, correctifs, incidents marquants. Objectif : anticiper les risques que je pourrai rencontrer en tant que futur technicien infrastructure.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap two-col">
+      <div>
+        <p class="eyebrow">MÉTHODE</p>
+        <h2 class="h-title">Comment je fais ma veille</h2>
+        <p style="color:var(--text-dim); max-width:56ch;">Consultation hebdomadaire de flux RSS et de sites spécialisés, avec un tri autour de mots-clés liés à mon domaine : virtualisation, Active Directory, équipements réseau, ransomware, CVE critiques. Chaque élément retenu est résumé avec mes propres mots et sourcé.</p>
+      </div>
+      <div>
+        <p class="eyebrow">SOURCES SUIVIES</p>
+        <div class="tags">
+          <span class="tag">CERT-FR / cyber.gouv.fr</span>
+          <span class="tag">IT-Connect</span>
+          <span class="tag">LeMagIT</span>
+          <span class="tag">ZATAZ</span>
+          <span class="tag amber">Cybermalveillance.gouv.fr</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">SEMAINE DU 17 AU 24 AOÛT 2026</p>
+      <h2 class="h-title">Ce que j'ai retenu</h2>
+      <div class="trace">
+
+        <div class="hop" data-hop="①">
+          <div class="hop-meta">VIRTUALISATION · SOURCE : IT-CONNECT</div>
+          <h3>Faille critique sur VMware vCenter Server</h3>
+          <p style="color:var(--text-dim); margin:0 0 6px;">Broadcom a corrigé fin juillet une faille de traversée de répertoire dans le service Syslog de vCenter (score de gravité 9,8/10), permettant à un attaquant non authentifié d'exécuter du code à distance. Des chercheurs allemands ont observé des tentatives d'exploitation dès le 3 août, avec des groupes de pirates scannant Internet à la recherche d'instances vCenter exposées.</p>
+          <p><a href="https://www.it-connect.fr/recap-actualite-cyber-aout-2026/" target="_blank" rel="noopener" style="color:var(--cyan); font-family:var(--font-mono); font-size:12.5px; text-decoration:none;">→ Lire la source (IT-Connect)</a></p>
+        </div>
+
+        <div class="hop" data-hop="②">
+          <div class="hop-meta">ACTIVE DIRECTORY · SOURCE : IT-CONNECT</div>
+          <h3>« ResetNightmare » : une faille Kerberos qui vise l'Active Directory</h3>
+          <p style="color:var(--text-dim); margin:0 0 6px;">Cette vulnérabilité du protocole Kerberos permettrait de réinitialiser le mot de passe de n'importe quel compte Active Directory. Elle rappelle à quel point la sécurisation de l'annuaire reste un point sensible dans l'administration d'un parc Windows, un sujet que je retrouve directement dans mes cours de BTS.</p>
+          <p><a href="https://www.it-connect.fr/actualites/actu-securite/" target="_blank" rel="noopener" style="color:var(--cyan); font-family:var(--font-mono); font-size:12.5px; text-decoration:none;">→ Lire la source (IT-Connect)</a></p>
+        </div>
+
+        <div class="hop" data-hop="③">
+          <div class="hop-meta">ÉQUIPEMENTS RÉSEAU · SOURCE : IT-CONNECT</div>
+          <h3>Citrix corrige un contournement d'authentification sur NetScaler</h3>
+          <p style="color:var(--text-dim); margin:0 0 6px;">Deux vulnérabilités ont été corrigées sur NetScaler ADC et Gateway, dont une permettant de contourner l'authentification à distance. Ces boîtiers étant souvent exposés en frontal sur Internet, ce type de faille illustre l'importance d'un suivi rigoureux des correctifs sur les équipements réseau périmétriques.</p>
+          <p><a href="https://www.it-connect.fr/actualites/actu-securite/" target="_blank" rel="noopener" style="color:var(--cyan); font-family:var(--font-mono); font-size:12.5px; text-decoration:none;">→ Lire la source (IT-Connect)</a></p>
+        </div>
+
+        <div class="hop" data-hop="④">
+          <div class="hop-meta">RETOUR D'INCIDENT · SOURCE : LEMAGIT</div>
+          <h3>Ransomware au Trésor public hongrois : 116 machines virtuelles touchées</h3>
+          <p style="color:var(--text-dim); margin:0 0 6px;">Une intrusion attribuée à des acteurs basés en Russie a permis aux attaquants d'obtenir des privilèges d'administrateur de domaine et de chiffrer les fichiers de 116 machines virtuelles. L'incident a été contenu par isolement rapide des systèmes touchés, un réflexe de base que je retiens comme technicien en formation.</p>
+          <p><a href="https://www.lemagit.fr/actualites/366648712/Cyberhebdo-du-7-aout-2026-une-semaine-dune-violence-exceptionnelle" target="_blank" rel="noopener" style="color:var(--cyan); font-family:var(--font-mono); font-size:12.5px; text-decoration:none;">→ Lire la source (LeMagIT)</a></p>
+        </div>
+
+        <div class="hop" data-hop="⑤">
+          <div class="hop-meta">TENDANCE · SOURCE : ZATAZ</div>
+          <h3>Le ransomware en France dépasse déjà le total de 2025</h3>
+          <p style="color:var(--text-dim); margin:0 0 6px;">Avec 181 victimes recensées, les attaques par rançongiciel observées en France en 2026 ont déjà dépassé l'ensemble de l'année précédente. Un signal qui confirme que la protection contre le ransomware (sauvegardes, cloisonnement réseau, gestion des droits) doit rester une priorité pour toute organisation, petite ou grande.</p>
+          <p><a href="https://www.zataz.com/cyber-actualites-zataz-de-la-semaine-du-17-au-23-aout-2026/" target="_blank" rel="noopener" style="color:var(--cyan); font-family:var(--font-mono); font-size:12.5px; text-decoration:none;">→ Lire la source (ZATAZ)</a></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section style="border-bottom:none;">
+    <div class="wrap">
+      <p class="eyebrow">ANALYSE</p>
+      <h2 class="h-title">Ce que j'en retiens comme futur technicien SISR</h2>
+      <p style="color:var(--text-dim); max-width:64ch;">Cette semaine de veille confirme trois priorités concrètes pour un poste en infrastructure : appliquer les correctifs de sécurité sans délai sur les briques critiques (hyperviseurs, annuaire, équipements réseau exposés), limiter et surveiller les comptes à privilèges élevés (administrateurs de domaine), et maintenir des sauvegardes testées pour pouvoir isoler et restaurer rapidement en cas d'incident. Ce sont des réflexes que je m'efforce d'appliquer dans mes projets de BTS et que je compte approfondir en stage.</p>
+      <p class="note">Cette page est mise à jour au fil de ma veille ; les liens renvoient vers les articles sources pour aller plus loin.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; width:100%;">
+    <span>Saint-Paul, La Réunion (97411)</span>
+    <a href="mailto:bousser.baptiste.bts@gmail.com">bousser.baptiste.bts@gmail.com</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
