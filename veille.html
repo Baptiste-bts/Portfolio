@@ -54,6 +54,17 @@
 
   <section>
     <div class="wrap">
+      <p class="eyebrow">FIL EN DIRECT<span class="live-badge">AUTO</span></p>
+      <h2 class="h-title">Derniers avis CERT-FR</h2>
+      <p class="h-sub">Ce flux affiche automatiquement les derniers avis de sécurité publiés par le CERT-FR (ANSSI), récupérés en direct à chaque visite — titres bruts, sans reformulation de ma part.</p>
+      <div id="live-feed" class="live-feed">
+        <p class="kv" style="color:var(--text-faint); padding:14px 0;">Chargement du flux…</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
       <p class="eyebrow">SEMAINE DU 17 AU 24 AOÛT 2026</p>
       <h2 class="h-title">Ce que j'ai retenu</h2>
       <div class="trace">
@@ -115,5 +126,30 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+(function () {
+  var container = document.getElementById('live-feed');
+  if (!container) return;
+  var feedUrl = 'https://www.cert.ssi.gouv.fr/avis/feed/';
+  var api = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(feedUrl) + '&count=8';
+
+  fetch(api)
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      if (data.status !== 'ok' || !data.items || !data.items.length) throw new Error('empty feed');
+      var html = '';
+      data.items.forEach(function (item) {
+        var d = new Date(item.pubDate);
+        var dateStr = isNaN(d) ? '' : d.toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', year: 'numeric' });
+        html += '<div class="live-item"><div class="live-date">' + dateStr + '</div>' +
+                '<a href="' + item.link + '" target="_blank" rel="noopener">' + item.title + '</a></div>';
+      });
+      container.innerHTML = html;
+    })
+    .catch(function () {
+      container.innerHTML = '<p class="kv" style="color:var(--text-faint); padding:14px 0;">Le flux n\'a pas pu être chargé pour le moment. Voir directement les <a href="https://www.cert.ssi.gouv.fr/avis/" target="_blank" rel="noopener" style="color:var(--cyan)">avis de sécurité du CERT-FR</a>.</p>';
+    });
+})();
+</script>
 </body>
 </html>

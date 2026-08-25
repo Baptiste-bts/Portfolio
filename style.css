@@ -385,3 +385,45 @@ blockquote.letter .sign{ margin-top: 26px; font-weight: 500; }
   padding-top: 16px;
   margin-top: 30px;
 }
+
+/* ---------- live feed ---------- */
+.live-feed{
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg-card);
+  padding: 6px 24px;
+}
+.live-item{
+  border-bottom: 1px dashed var(--line);
+  padding: 14px 0;
+}
+.live-item:last-child{ border-bottom: none; }
+.live-date{
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--text-faint);
+  margin-bottom: 4px;
+}
+.live-item a{
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14.5px;
+}
+.live-item a:hover{ color: var(--cyan); }
+.live-badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--amber);
+  margin-left: 10px;
+}
+.live-badge::before{
+  content: "";
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--amber);
+  animation: pulse 2.4s ease-in-out infinite;
+}
