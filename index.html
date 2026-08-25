@@ -1,67 +1,73 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Baptiste Bousser — Portfolio BTS SIO</title>
-<meta name="description" content="Portfolio de Baptiste Bousser, étudiant en BTS SIO option SISR — CV, lettre de motivation et parcours.">
-<link rel="stylesheet" href="style.css">
+<title>Baptiste Bousser — BTS SIO Portfolio</title>
+<meta name="description" content="Portfolio of Baptiste Bousser, BTS SIO (SISR track) student — résumé, cover letter and background.">
+<link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap">
     <a href="index.html" class="brand">BAPTISTE&nbsp;BOUSSER<span class="dot">.</span><small>SISR</small></a>
-    <button class="navtoggle" aria-label="Ouvrir le menu">☰</button>
-    <nav class="mainnav">
-      <a href="index.html">ACCUEIL</a>
-      <a href="bts.html">LE BTS SIO</a>
-      <a href="cv.html">CV</a>
-      <a href="lettre.html">LETTRE</a>
-      <a href="activites.html">ACTIVITÉS</a>
-      <a href="veille.html">VEILLE</a>
-    </nav>
+    <div class="nav-group">
+      <nav class="mainnav">
+        <a href="index.html">HOME</a>
+        <a href="bts.html">BTS SIO</a>
+        <a href="cv.html">CV</a>
+        <a href="lettre.html">COVER LETTER</a>
+        <a href="activites.html">ACTIVITIES</a>
+        <a href="veille.html">TECH WATCH</a>
+      </nav>
+      <div class="langswitch">
+        <a href="../index.html">FR</a>
+        <a href="index.html" class="lang-active">EN</a>
+      </div>
+      <button class="navtoggle" aria-label="Open menu">☰</button>
+    </div>
   </div>
 </header>
 
 <main>
   <section class="hero">
     <div class="wrap">
-      <p class="eyebrow">DISPONIBLE POUR UN STAGE — JANVIER 2027</p>
-      <h1>Support &amp; infrastructures<br>informatiques, <em>option réseaux</em>.</h1>
-      <p class="lede">Étudiant en 2ᵉ année de BTS Services Informatiques aux Organisations, option SISR, au lycée Pierre Poivre (Saint-Joseph, La Réunion). Ce portfolio réunit ma présentation, mon CV, ma lettre de motivation et mes activités.</p>
-      <p class="prompt">baptiste@sisr:<span class="path">~/portfolio</span>$ statut --recherche "stage 8 semaines"<span class="cursor"></span></p>
+      <p class="eyebrow">SKILLS PORTFOLIO — BTS SIO SISR</p>
+      <h1>IT support &amp; network<br>infrastructure, <em>SISR track</em>.</h1>
+      <p class="lede">Second-year student in the BTS SIO program (IT Services), SISR track, at Lycée Pierre Poivre (Saint-Joseph, Réunion Island). This portfolio brings together my profile, résumé, cover letter and activities, as part of my end-of-year exams.</p>
+      <p class="prompt">baptiste@sisr:<span class="path">~/portfolio</span>$ display --profile --skills<span class="cursor"></span></p>
     </div>
   </section>
 
   <section>
     <div class="wrap">
-      <p class="eyebrow">NAVIGUER</p>
-      <h2 class="h-title">Un portfolio, quatre volets</h2>
-      <p class="h-sub">Chaque page couvre un aspect de mon parcours de BTS SIO, du diplôme visé jusqu'aux expériences de terrain.</p>
+      <p class="eyebrow">NAVIGATE</p>
+      <h2 class="h-title">One portfolio, four parts</h2>
+      <p class="h-sub">Each page covers a part of my BTS SIO journey, from the diploma I'm working toward to hands-on field experience.</p>
       <div class="grid">
         <a href="bts.html" style="text-decoration:none">
           <div class="card">
-            <h3>Le BTS SIO</h3>
-            <p>Présentation du diplôme, de l'option SISR et de ma formation au lycée Pierre Poivre.</p>
+            <h3>The BTS SIO</h3>
+            <p>Overview of the diploma, the SISR track and my training at Lycée Pierre Poivre.</p>
           </div>
         </a>
         <a href="cv.html" style="text-decoration:none">
           <div class="card">
-            <h3>Mon CV</h3>
-            <p>Compétences techniques, formation, expérience professionnelle et internationale.</p>
+            <h3>My CV</h3>
+            <p>Technical skills, education, and professional and international experience.</p>
           </div>
         </a>
         <a href="lettre.html" style="text-decoration:none">
           <div class="card">
-            <h3>Lettre de motivation</h3>
-            <p>Ma candidature pour un stage de 8 semaines à partir de janvier 2027.</p>
+            <h3>Cover letter</h3>
+            <p>A sample professional application, written as part of my training.</p>
           </div>
         </a>
         <a href="activites.html" style="text-decoration:none">
           <div class="card">
-            <h3>Mes activités</h3>
-            <p>Stage, atelier d'initiation à la programmation, mobilité Erasmus et projets de BTS.</p>
+            <h3>My activities</h3>
+            <p>Internship, coding workshop, Erasmus mobility and BTS SIO projects.</p>
           </div>
         </a>
       </div>
@@ -70,15 +76,15 @@
 
   <section>
     <div class="wrap">
-      <p class="eyebrow">STACK TECHNIQUE</p>
-      <h2 class="h-title">Compétences principales</h2>
+      <p class="eyebrow">TECH STACK</p>
+      <h2 class="h-title">Main skills</h2>
       <div class="tags">
-        <span class="tag">Réseaux &amp; TCP/IP</span>
+        <span class="tag">Networking &amp; TCP/IP</span>
         <span class="tag">HTML / CSS / JS</span>
         <span class="tag">Python</span>
         <span class="tag">MySQL / MariaDB</span>
         <span class="tag">Windows &amp; Linux</span>
-        <span class="tag amber">Support utilisateurs</span>
+        <span class="tag amber">User support</span>
       </div>
     </div>
   </section>
@@ -86,11 +92,11 @@
 
 <footer>
   <div class="wrap" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; width:100%;">
-    <span>Saint-Paul, La Réunion (97411)</span>
+    <span>Saint-Paul, Réunion Island (97411)</span>
     <a href="mailto:bousser.baptiste.bts@gmail.com">bousser.baptiste.bts@gmail.com</a>
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="../script.js"></script>
 </body>
 </html>
