@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technology Watch — Baptiste Bousser</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index-en.html" class="brand">BAPTISTE&nbsp;BOUSSER<span class="dot">.</span><small>SISR</small></a>
+    <div class="nav-group">
+      <nav class="mainnav">
+        <a href="index-en.html">HOME</a>
+        <a href="bts-en.html">BTS SIO</a>
+        <a href="cv-en.html">CV</a>
+        <a href="lettre-en.html">COVER LETTER</a>
+        <a href="activites-en.html">ACTIVITIES</a>
+        <a href="veille-en.html">TECH WATCH</a>
+      </nav>
+      <div class="langswitch">
+        <a href="veille.html">FR</a>
+        <a href="veille-en.html" class="lang-active">EN</a>
+      </div>
+      <button class="navtoggle" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom:50px;">
+    <div class="wrap">
+      <p class="eyebrow">TECHNOLOGY WATCH</p>
+      <h1>Infrastructure &amp; <em>network</em> security</h1>
+      <p class="lede">As part of my BTS SIO, SISR track, I follow cybersecurity and systems/network administration news: critical vulnerabilities, patches, notable incidents. Goal: anticipate the risks I may face as a future infrastructure technician.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap two-col">
+      <div>
+        <p class="eyebrow">METHOD</p>
+        <h2 class="h-title">How I do my watch</h2>
+        <p style="color:var(--text-dim); max-width:56ch;">Weekly review of RSS feeds and specialized websites, filtered around keywords related to my field: virtualization, Active Directory, network equipment, ransomware, critical CVEs. Each summary below restates the key information from the cited source articles: those sources are authoritative, my summaries are just a synthesis. The "Read source" link under each entry leads to the original article.</p>
+      </div>
+      <div>
+        <p class="eyebrow">SOURCES FOLLOWED</p>
+        <div class="tags">
+          <span class="tag">CERT-FR / cyber.gouv.fr</span>
+          <span class="tag">IT-Connect</span>
+          <span class="tag">LeMagIT</span>
+          <span class="tag">ZATAZ</span>
+          <span class="tag amber">Cybermalveillance.gouv.fr</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">LIVE FEED<span class="live-badge">AUTO</span></p>
+      <h2 class="h-title">Latest CERT-FR advisories</h2>
+      <p class="h-sub">This feed automatically displays the latest security advisories published by CERT-FR (ANSSI), fetched live on each visit — raw headlines, without my own rewording. Titles are in French, as published by the source.</p>
+      <div id="live-feed" class="live-feed">
+        <p class="kv" style="color:var(--text-faint); padding:14px 0;">Loading feed…</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">WEEK OF AUGUST 17–24, 2026</p>
+      <h2 class="h-title">What I noted</h2>
+      <div class="trace">
+
+        <div class="hop" data-hop="①">
+          <div class="hop-meta">VIRTUALIZATION · SOURCE: IT-CONNECT</div>
+          <h3>Critical flaw in VMware vCenter Server</h3>
+          <p style="color:var(--text-dim); margin:0 0 6px;">In late July, Broadcom patched a directory traversal flaw in vCenter's Syslog service (severity score 9.8/10), allowing an unauthenticated attacker to execute remote code. German researchers observed exploitation attempts as early as August 3, with threat actors scanning the internet for exposed vCenter instances.</p>
+          <p><a href="https://www.it-connect.fr/recap-actualite-cyber-aout-2026/" target="_blank" rel="noopener" style="color:var(--cyan); font-family:var(--font-mono); font-size:12.5px; text-decoration:none;">→ Read source (IT-Connect)</a></p>
+        </div>
+
+        <div class="hop" data-hop="②">
+          <div class="hop-meta">ACTIVE DIRECTORY · SOURCE: IT-CONNECT</div>
+          <h3>"ResetNightmare": a Kerberos flaw targeting Active Directory</h3>
+          <p style="color:var(--text-dim); margin:0 0 6px;">This Kerberos protocol vulnerability could allow an attacker to reset the password of any Active Directory account. It's a reminder of how sensitive directory security remains when managing a Windows environment — a topic I cover directly in my BTS coursework.</p>
+          <p><a href="https://www.it-connect.fr/actualites/actu-securite/" target="_blank" rel="noopener" style="color:var(--cyan); font-family:var(--font-mono); font-size:12.5px; text-decoration:none;">→ Read source (IT-Connect)</a></p>
+        </div>
+
+        <div class="hop" data-hop="③">
+          <div class="hop-meta">NETWORK EQUIPMENT · SOURCE: IT-CONNECT</div>
+          <h3>Citrix patches an authentication bypass on NetScaler</h3>
+          <p style="color:var(--text-dim); margin:0 0 6px;">Two vulnerabilities were fixed on NetScaler ADC and Gateway, including one allowing remote authentication bypass. Since these appliances are often exposed directly to the internet, this kind of flaw highlights the importance of rigorously tracking patches on perimeter network equipment.</p>
+          <p><a href="https://www.it-connect.fr/actualites/actu-securite/" target="_blank" rel="noopener" style="color:var(--cyan); font-family:var(--font-mono); font-size:12.5px; text-decoration:none;">→ Read source (IT-Connect)</a></p>
+        </div>
+
+        <div class="hop" data-hop="④">
+          <div class="hop-meta">INCIDENT REPORT · SOURCE: LEMAGIT</div>
+          <h3>Ransomware attack on Hungary's State Treasury: 116 virtual machines affected</h3>
+          <p style="color:var(--text-dim); margin:0 0 6px;">An intrusion attributed to Russia-based actors allowed attackers to obtain domain administrator privileges and encrypt files on 116 virtual machines. The incident was contained by quickly isolating the affected systems — a basic reflex I'm taking note of as a technician in training.</p>
+          <p><a href="https://www.lemagit.fr/actualites/366648712/Cyberhebdo-du-7-aout-2026-une-semaine-dune-violence-exceptionnelle" target="_blank" rel="noopener" style="color:var(--cyan); font-family:var(--font-mono); font-size:12.5px; text-decoration:none;">→ Read source (LeMagIT)</a></p>
+        </div>
+
+        <div class="hop" data-hop="⑤">
+          <div class="hop-meta">TREND · SOURCE: ZATAZ</div>
+          <h3>Ransomware in France already exceeds 2025's total</h3>
+          <p style="color:var(--text-dim); margin:0 0 6px;">With 181 recorded victims, ransomware attacks observed in France in 2026 have already surpassed the entire previous year. A signal confirming that ransomware protection (backups, network segmentation, access management) must remain a priority for any organization, large or small.</p>
+          <p><a href="https://www.zataz.com/cyber-actualites-zataz-de-la-semaine-du-17-au-23-aout-2026/" target="_blank" rel="noopener" style="color:var(--cyan); font-family:var(--font-mono); font-size:12.5px; text-decoration:none;">→ Read source (ZATAZ)</a></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section style="border-bottom:none;">
+    <div class="wrap">
+      <p class="eyebrow">ANALYSIS</p>
+      <h2 class="h-title">What I take away from this as a future SISR technician</h2>
+      <p style="color:var(--text-dim); max-width:64ch;">This week of monitoring confirms three concrete priorities for an infrastructure role: apply security patches without delay on critical components (hypervisors, directory services, exposed network equipment), limit and monitor high-privilege accounts (domain administrators), and maintain tested backups to be able to quickly isolate and restore in case of an incident. These are habits I try to apply in my BTS projects and plan to deepen during my internship.</p>
+      <p class="note">This page is updated as I continue my technology watch; the links lead to the source articles to learn more.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; width:100%;">
+    <span>Saint-Paul, Réunion Island (97411)</span>
+    <a href="mailto:bousser.baptiste.bts@gmail.com">bousser.baptiste.bts@gmail.com</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+(function () {
+  var container = document.getElementById('live-feed');
+  if (!container) return;
+  var feedUrl = 'https://www.cert.ssi.gouv.fr/avis/feed/';
+  var api = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(feedUrl) + '&count=8';
+
+  fetch(api)
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      if (data.status !== 'ok' || !data.items || !data.items.length) throw new Error('empty feed');
+      var html = '';
+      data.items.forEach(function (item) {
+        var d = new Date(item.pubDate);
+        var dateStr = isNaN(d) ? '' : d.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+        html += '<div class="live-item"><div class="live-date">' + dateStr + '</div>' +
+                '<a href="' + item.link + '" target="_blank" rel="noopener">' + item.title + '</a></div>';
+      });
+      container.innerHTML = html;
+    })
+    .catch(function () {
+      container.innerHTML = '<p class="kv" style="color:var(--text-faint); padding:14px 0;">The feed could not be loaded right now. See the <a href="https://www.cert.ssi.gouv.fr/avis/" target="_blank" rel="noopener" style="color:var(--cyan)">CERT-FR security advisories</a> directly.</p>';
+    });
+})();
+</script>
+</body>
+</html>
